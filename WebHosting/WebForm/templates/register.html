@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block title %} Register {% endblock %}
+
+{% block image %}
+    <img src="https://source.unsplash.com/user/erondu/1600x900">
+
+
+{% endblock image %}
+
+{% block body %}
+
+<i><p>Welcome! Please register here to enjoy web hosting content.</p></i>
+
+<form method="post"> {% csrf_token %}
+    <legend>Register Form</legend>
+        <fieldset>
+            {{ form.as_p }}
+            <input type="submit" value="Register" name="Register"/>
+        </fieldset>
+</form>
+
+{% endblock body %}
+

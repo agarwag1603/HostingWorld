@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block image %}
+    <img src="https://source.unsplash.com/user/erondu/1600x900">
+
+{% endblock image %}
+
+{% block title %} SignUp {% endblock %}
+
+{% block body %}
+
+<i><p>Welcome {{s.FirstName}}!</p></i>
+
+<form method="post" >{% csrf_token %}
+    <legend>Sign In</legend>
+    <fieldset>
+         {{ s.as_p }}
+    </fieldset>
+    <br>
+    <input type="submit" value="SignUp" name="SignUp" formaction="/signUp/"/>
+</form>
+
+{% endblock body%}
